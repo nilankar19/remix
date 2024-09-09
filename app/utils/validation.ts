@@ -1,0 +1,26 @@
+import { z } from "zod";
+
+export const formSchema = z.object({
+  businessName: z.string().min(1, { message: "Business Name is required" }),
+  contactName: z.string().min(3, { message: "Contact Name is required" }),
+  firstName: z.string().min(3, { message: "Contact Name is required" }),
+  lastName: z.string().optional(),
+  preferredPronouns: z.string().min(1, { message: "Preferred Pronouns are required" }),
+  mailingAddress: z.string().min(1, { message: "Mailing Address is required" }),
+  emailAddress: z.string().email({ message: "Invalid email address" }),
+  phoneNumber: z.string().min(10, { message: "Invalid phone number" }),
+  category: z.string().min(1, { message: "Category is required" }),
+  website: z.string().url({ message: "Invalid URL" }),
+  igHandle: z.string().optional(),
+  chooseYourSpace: z.string().min(1, { message: "Space selection is required" }),
+  firstTime: z.boolean().optional(),
+  amazingExperience: z.string().optional(),
+  otherMarkets: z.boolean().optional(),
+  howDidYouHear: z.string().optional(),
+  whyJoin: z.string().min(1, { message: "This field is required" }),
+  payIn72Hours: z.boolean(),
+  bipoc: z.boolean().optional(),
+  lgbtqia: z.boolean().optional(),
+  emergingBusiness: z.boolean().optional(),
+  terms: z.boolean({ required_error: "You must agree to the Terms & Conditions" }),
+});
