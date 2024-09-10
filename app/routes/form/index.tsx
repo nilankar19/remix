@@ -56,9 +56,9 @@ export async function action({
       <Form method="post">
             <div className="FormHeader formHeaderInside">
                 <div className="logoPosition">
-                    <div className="hdrLogoImgDiv">
+                    {/* <div className="hdrLogoImgDiv">
                         <img aria-hidden="true" src="" alt="brand name"/>
-                    </div>
+                    </div> */}
                     <div className="headerCont">
                         <h2 className="brandName" >Churi Market</h2>
                     </div>
